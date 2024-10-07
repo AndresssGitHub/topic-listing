@@ -19,14 +19,26 @@ const { title } = Astro.props;
   <body>
     <slot />
 
-    <nav class="bg-sky-300 flex justify-center mx-auto">
+    <nav
+      class="bg-sky-300 flex justify-center mx-auto fixed top-0 left-0 w-full z-50"
+    >
       <div class="flex items-center space-x-4 p-3 text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-12">
-          <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
-          <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
-          <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="size-12"
+        >
+          <path
+            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z"
+          ></path>
+          <path
+            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z"
+          ></path>
+          <path
+            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z"
+          ></path>
         </svg>
-        
 
         <span class="font-bold text-white text-3xl">Topic</span>
 
@@ -73,8 +85,9 @@ const { title } = Astro.props;
         </svg>
       </div>
     </nav>
-    <div class="mx-auto bg-sky-300 h-fit mb-12">
-      <div class="flex flex-col items-center justify-center h-full pt-12 mb-6">
+
+    <div class="mx-auto bg-sky-300 mb-24 pt-24">
+      <div class="flex flex-col items-center justify-center h-full">
         <h1 class="text-white text-5xl font-bold">Discover. Learn. Enjoy</h1>
         <h6 class="py-6 text-bl font-semibold text-slate-800">
           Platform for learning and sharing knowledge
@@ -101,7 +114,7 @@ const { title } = Astro.props;
             placeholder="Discover, Code, Marketing, Finance..."
           />
           <div
-            class="bg-green-600 rounded-md px-4 py-1 text-white text-sm font-medium"
+            class="bg-green-500 hover:bg-green-600 transition-colors rounded-md px-4 py-1 text-white text-sm font-medium"
           >
             Search
           </div>
@@ -115,12 +128,16 @@ const { title } = Astro.props;
           <div
             class="bg-slate-200 rounded-md w-2/6 mb-6 flex-1 items-center justify-between h-full"
           >
-          <div class="font-bold text-slate-700 text-xl mx-6 my-6 flex items-center justify-between">
-            Web Design
-            <span class="bg-blue-600 rounded-md font-semibold text-sm text-white p-1">
-              14
-            </span>
-          </div>          
+            <div
+              class="font-bold text-slate-700 text-xl mx-6 my-6 flex items-center justify-between"
+            >
+              Web Design
+              <span
+                class="bg-blue-600 rounded-md font-semibold text-sm text-white p-1"
+              >
+                14
+              </span>
+            </div>
 
             <p class="text-slate-600 font-semibold text-base mx-6 mt-2 w-96">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea,
@@ -154,7 +171,9 @@ const { title } = Astro.props;
                 class="bg-blue-600 rounded-md font-semibold text-sm text-white p-1 justify-end ml-64"
                 >23</span
               >
-              <p class="text-slate-200 font-semibold text-base mx-auto mt-4 w-96">
+              <p
+                class="text-slate-200 font-semibold text-base mx-auto mt-4 w-96"
+              >
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea,
                 ipsam sunt? Molestiae, quo optio nobis vitae repellendus fuga
                 nemo eos minima tempore
@@ -217,7 +236,17 @@ const { title } = Astro.props;
           <!-- Fin tarjeta 2 -->
         </div>
       </div>
-      <div class="bg-orange-500">a</div>
+
+      <div class="bg-orange-500 flex justify-center items-center h-fit">
+        <h1 class="font-bold text-3xl">Browse Topics</h1>
+      </div>
+      <div class="flex justify-center items-center h-fit mx-auto space-x-16">
+        <a href="#">Design</a>
+        <a href="#">Marketing</a>
+        <a href="#">Finance</a>
+        <a href="#">Music</a>
+        <a href="#">Education</a>
+      </div>
     </div>
   </body>
 </html>
